@@ -2,22 +2,11 @@
 # Rodrigo Pacheco Martinez-Atienza
 # Doble Grado Ing. Tecnología de las Telecomunicaciones e Ing. Aeroespacial en Aeronavegación
 
-from sys import argv
+import sys
+import operator
 
-def sumar(a,b):
-    return a+b
-
-def restar(a,b):
-    return a-b
-
-def multiplicar(a,b):
-    return a*b
-
-def dividir(a,b):
-    return a/b
-
-operaciones = {'suma': sumar, 'resta': restar, 'multiplica': multiplicar, 'divide': dividir}
-param = argv
+operaciones = {'suma': operator.add, 'resta': operator.sub, 'multiplica': operator.mul, 'divide': operator.truediv}
+param = sys.argv
 
 print("\nUso: python3 calculadora.py 'opción' valor1 valor2\n\n", "Opciones de calculadora:\n", "- Suma\n", "- Resta\n", "- Multiplica\n", "- Divide\n")
 
@@ -26,10 +15,14 @@ try:
     print("Resultado: ", resultado)
 except IndexError:
     print("Número de parámetros incorrecto")
+    sys.exit
 except KeyError:
     print("Opción no soportada")
+    sys.exit
 except ZeroDivisionError:
     print("División por 0. Resultado es 0")
+    sys.exit
 except ValueError:
     print("Valor introducido erróneo. Debe ser número")
+    sys.exit
 
