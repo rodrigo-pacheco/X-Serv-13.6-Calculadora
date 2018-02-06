@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 # Rodrigo Pacheco Martinez-Atienza
-# Doble Grado Ing. Tecnología de las Telecomunicaciones e Ing. Aeroespacial en Aeronavegación
+# Doble Grado Ing. Tecnología de las Telecomunicaciones 
+# e Ing. Aeroespacial en Aeronavegación
 
 import sys
 import operator
@@ -8,8 +9,7 @@ import operator
 operaciones = {'suma': operator.add,
                'resta': operator.sub,
                'multiplica': operator.mul,
-               'divide': operator.truediv
-              }
+               'divide': operator.truediv}
 param = sys.argv
 
 print("\nUso: python3 calculadora.py 'opción' valor1 valor2\n\n",
