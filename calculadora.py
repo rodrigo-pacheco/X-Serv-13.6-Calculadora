@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 # Rodrigo Pacheco Martinez-Atienza
-# Doble Grado Ing. Tecnología de las Telecomunicaciones 
+# Doble Grado Ing. Tecnología de las Telecomunicaciones
 # e Ing. Aeroespacial en Aeronavegación
 
 import sys
@@ -31,4 +31,3 @@ except ZeroDivisionError:
 except ValueError:
     print("Valor introducido erróneo. Debe ser número")
     sys.exit
-
