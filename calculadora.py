@@ -1,7 +1,12 @@
 #!/usr/bin/python3
-# Rodrigo Pacheco Martinez-Atienza
-# Doble Grado Ing. Tecnología de las Telecomunicaciones
-# e Ing. Aeroespacial en Aeronavegación
+"""
+Rodrigo Pacheco Martinez-Atienza
+Doble Grado Ing. Tecnología de las Telecomunicaciones
+e Ing. Aeroespacial en Aeronavegación
+r.pachecom @ alumnos.urjc.es
+
+Ejercicio: Calculadora
+"""
 
 import sys
 import operator
