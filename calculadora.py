@@ -5,10 +5,16 @@
 import sys
 import operator
 
-operaciones = {'suma': operator.add, 'resta': operator.sub, 'multiplica': operator.mul, 'divide': operator.truediv}
+operaciones = {'suma': operator.add,
+               'resta': operator.sub,
+               'multiplica': operator.mul,
+               'divide': operator.truediv
+              }
 param = sys.argv
 
-print("\nUso: python3 calculadora.py 'opción' valor1 valor2\n\n", "Opciones de calculadora:\n", "- Suma\n", "- Resta\n", "- Multiplica\n", "- Divide\n")
+print("\nUso: python3 calculadora.py 'opción' valor1 valor2\n\n",
+      "Opciones de calculadora:\n",
+      "- Suma\n", "- Resta\n", "- Multiplica\n", "- Divide\n")
 
 try:
     resultado = operaciones[param[1]](float(param[2]), float(param[3]))
