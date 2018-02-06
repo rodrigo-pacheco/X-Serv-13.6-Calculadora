@@ -6,11 +6,16 @@
 import sys
 import operator
 
+NUM_ARGS = 4
+
 operaciones = {'suma': operator.add,
                'resta': operator.sub,
                'multiplica': operator.mul,
                'divide': operator.truediv}
 param = sys.argv
+
+if param != NUM_ARGS:
+    sys.exit("Usage error: [operator] [number1] [number2]")
 
 print("\nUso: python3 calculadora.py 'opción' valor1 valor2\n\n",
       "Opciones de calculadora:\n",
@@ -20,14 +25,10 @@ try:
     resultado = operaciones[param[1]](float(param[2]), float(param[3]))
     print("Resultado: ", resultado)
 except IndexError:
-    print("Número de parámetros incorrecto")
-    sys.exit
+    sys.exit("Usage error: [operator] [number1] [number2]")
 except KeyError:
-    print("Opción no soportada")
-    sys.exit
+    sys.exit("Opción no soportada")
 except ZeroDivisionError:
-    print("División por 0. Resultado es 0")
-    sys.exit
+    sys.exit("División por 0. Resultado es 0")
 except ValueError:
-    print("Valor introducido erróneo. Debe ser número")
-    sys.exit
+    sys.exit("Valor introducido erróneo. Debe ser número")
